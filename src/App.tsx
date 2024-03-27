@@ -6,6 +6,23 @@ import Status from './components/Status';
 import Heading from './components/Heading';
 import Oscar from './components/Oscar';
 import Button from './components/Button';
+import Input from './components/Input';
+import Container from './components/Container';
+import LoggedIn from './components/state/LoggedIn';
+import Counter from './components/state/Counter';
+import ThemeContextProvider from './components/context/ThemeContext';
+import Box from './components/context/Box';
+import { UserContextProvider } from './components/context/UserContext';
+import User from './components/context/User';
+import DomRef from './components/ref/DomRef';
+import MutableRef from './components/ref/MutableRef';
+import Private from './components/auth/Private';
+import Profile from './components/auth/Profile';
+import List from './components/generic/List';
+import RandomNumber from './components/restrictions/RandomNumber';
+import Toast from './components/templateLiterals/Toast';
+import { CustomButton } from './components/html/Button';
+import CustomComponent from './components/html/CustomComponent';
 
 function App() {
   const personName = {
@@ -37,10 +54,31 @@ function App() {
         <Heading>Oscar goes to Leonardo decapreo</Heading>
       </Oscar>
       <Greets name={'Adarsh'} isLoggedIn={true} /> */}
-      <Button handleClick={(event, id) => {
+      {/* <Button handleClick={(event, id) => {
         console.log('button clicked...', event);
         console.log(`your id is ${id}`);
       }} />
+      <Input value='' handleChange={(event) => console.log(event)} /> */}
+      {/* <Container styles={{ border: '1px solid black', padding: '1rem' }} /> */}
+      {/* <LoggedIn /> */}
+      {/* <Counter /> */}
+
+      {/* <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider> */}
+
+      {/* <UserContextProvider>
+        <User />
+      </UserContextProvider> */}
+      {/* <DomRef />
+      <MutableRef /> */}
+
+      {/* <Private isLoggedIn={true} component={Profile} /> */}
+      {/* <List items={['superman', 'spiderman', 'batman']} onClick={(item) => console.log(item)} /> */}
+      {/* <RandomNumber value={200} isZero  /> */}
+      {/* <Toast position='right-top' /> */}
+      {/* <CustomButton variant='secondary' onClick={() => console.log('Clicked')}>Primary Button</CustomButton> */}
+      <CustomComponent isLoggedIn={true} name='Adarsh' messageCount={1340} />
     </div>
   );
 }

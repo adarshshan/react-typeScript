@@ -1,11 +1,6 @@
 import React from 'react'
+import { User } from './Person.types'
 
-type User = {
-    name: {
-        first: string;
-        last: string;
-    }
-}
 
 function Person(props: User) {
     return (
