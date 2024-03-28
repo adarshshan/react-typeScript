@@ -23,6 +23,7 @@ import RandomNumber from './components/restrictions/RandomNumber';
 import Toast from './components/templateLiterals/Toast';
 import { CustomButton } from './components/html/Button';
 import CustomComponent from './components/html/CustomComponent';
+import Text from './components/polimorphic/Text';
 
 function App() {
   const personName = {
@@ -78,7 +79,10 @@ function App() {
       {/* <RandomNumber value={200} isZero  /> */}
       {/* <Toast position='right-top' /> */}
       {/* <CustomButton variant='secondary' onClick={() => console.log('Clicked')}>Primary Button</CustomButton> */}
-      <CustomComponent isLoggedIn={true} name='Adarsh' messageCount={1340} />
+      {/* <CustomComponent isLoggedIn={true} name='Adarsh' messageCount={1340} /> */}
+      <Text as='h1' size='lg' color='secondary'>Hellow</Text>
+      <Text as='p' size='sm' >Goodmorning</Text>
+      <Text as='label' htmlFor='someId' >Namasthe</Text>
     </div>
   );
 }
